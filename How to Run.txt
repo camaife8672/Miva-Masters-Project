@@ -1,0 +1,41 @@
+How to Run
+
+1-Install dependencies:
+pip install -r requirements.txt
+
+2-Setup MySQL:
+
+Create a database, e.g., crop_yield_db.
+
+Update the DATABASE_URL in app.py with your credentials (line ~15).
+
+3- Run the server:
+
+bash
+python app.py
+
+4- Open your browser to http://localhost:8000.
+
+✨ What Works
+User Registration & Login – roles stored in MySQL.
+
+Dashboard – KPI cards, charts, farm/crop statistics, weather (mock or real if API key provided).
+
+Farm & Crop Management – Add, list, delete farms and crops.
+
+Prediction – Uses Random Forest, XGBoost, Decision Tree; shows results and recommendations.
+
+Reports – Generate and view reports.
+
+Profile & Settings – View user info, change password (simulated).
+
+Admin Panel – Train models (visible only to Admin role).
+
+All data is persisted in MySQL. The frontend is fully interactive and updates in real‑time.
+
+🔧 Customisation
+Replace WEATHER_API_KEY with your OpenWeatherMap key to get live weather.
+
+Modify the synthetic data generation in generate_synthetic_data() to use your own dataset.
+
+The ML models are trained on‑the‑fly; the first prediction will trigger training automatically.
